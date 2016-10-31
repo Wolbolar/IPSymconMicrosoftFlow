@@ -160,14 +160,16 @@ Wenn wir über einen Flow Daten an IP-Symcon verschicken wollen erstellen wir zu
 
 Flow HTTP 
 
-![Flow HTTP](Doku/flowhttp.png "Flow HTTP") 
+![Flow HTTP a](Doku/configflowhttp.png "Flow HTTP a") 
+
+![Flow HTTP b](Doku/configflowc.png "Flow HTTP b") 
 
 
 Das Modul in IP Symcon erwartet die Daten wie folgt:
 
 | Eigenschaft           | Wert                                                                                        |
 | :-------------------: | :-----------------------------------------------------------------------------------------: |
-| _**URI**_             | IP-Symcon Connect Adresse                                                                   |
+| _**URI**_             | IP-Symcon Connect Adresse/hook/flow                                                                   |
 |_**Methode**_          | POST                                                                                        |
 |_**Header**_           | {"charset":"utf-8","Content-Type":"application/json"}                                       |                                                                                          |
 |_**Body**_             | {"system":"ips4","objectid":22222,"values":<<payload>>}	                                  |
