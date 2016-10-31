@@ -1,0 +1,11 @@
+{
+	"id": "{A34F3D85-8A77-4557-918B-7D0A13EC8089}",
+	"name": "Flow",
+	"type": 3,
+	"vendor": "Microsoft",
+	"aliases": ["Microsoft Flow"],
+	"parentRequirements": ["{3F5C518E-C367-40AA-9231-479E50E914A4}"],
+	"childRequirements": [],
+	"implemented": ["{C1269E03-7292-4406-88E1-E9A8BEE8795F}"],
+	"prefix": "Flow"
+}

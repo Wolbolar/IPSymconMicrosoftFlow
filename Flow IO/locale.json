@@ -1,0 +1,13 @@
+{
+	"translations": {
+		"de": { 
+			"Connection from Flow to IP-Symcon":"Verbindung von Flow to IP-Symcon",
+			"authentication for Flow webhook":"Authentifizierung für den Flow Webhook",
+			"username":"Benutzername",
+			"password":"Passwort",
+			"Creating instance.": "Die Instanz wird erstellt.",
+			"Interface closed.": "Interface geschlossen.",
+			"Flow I/O created.": "Flow I/O erstellt."			
+		}
+	}
+}

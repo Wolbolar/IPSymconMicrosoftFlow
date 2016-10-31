@@ -1,0 +1,90 @@
+{
+	"elements":
+	[
+		{ "type": "Label", "label": "Connection from IP-Symcon to Flow" },
+		{ "type": "Label", "label": "Flow webhook (request)" },
+		{ "name": "flowwebhook", "type": "ValidationTextBox", "caption": "Flow webhook URL" },
+		{ "type": "Label", "label": "variables with values for Flow" },
+		{ "type": "SelectVariable", "name": "varvalue1", "caption": "value 1" },
+		{ "type": "SelectVariable", "name": "varvalue2", "caption": "value 2" },
+		{ "type": "SelectVariable", "name": "varvalue3", "caption": "value 3" },
+		{ "type": "Label", "label": "alternative leave variable empty und click check mark" },
+		{
+                    "name": "modulinput1",
+                    "type": "CheckBox",
+                    "caption": "use modul value 1"
+                },	
+		{ "name": "value1", "type": "ValidationTextBox", "caption": "value 1" },
+		{
+                    "name": "modulinput2",
+                    "type": "CheckBox",
+                    "caption": "use modul value 2"
+                },
+		{ "name": "value2", "type": "ValidationTextBox", "caption": "value 2" },
+		{
+                    "name": "modulinput3",
+                    "type": "CheckBox",
+                    "caption": "use modul value 3"
+                },
+		{ "name": "value3", "type": "ValidationTextBox", "caption": "value 3" },
+		{ "type": "Label", "label": "Return Message from Flow" },
+		{
+                    "name": "flowreturn",
+                    "type": "CheckBox",
+                    "caption": "Flow Return"
+                }
+	],
+	"actions":
+			[
+				{ "type": "Label", "label": "Trigger Microsoft Flow" },
+				{ "type": "Button", "label": "Trigger Flow", "onClick": "Flow_TriggerFlow($id);" }
+			],		
+    "status":
+            [
+                {
+                    "code": 101,
+                    "icon": "inactive",
+                    "caption": "Creating instance."
+                },
+				{
+                    "code": 102,
+                    "icon": "active",
+                    "caption": "Flow created."
+                },
+                {
+                    "code": 104,
+                    "icon": "inactive",
+                    "caption": "interface closed."
+                },
+                {
+                    "code": 202,
+                    "icon": "error",
+                    "caption": "select a value or enter value in module."
+                },
+				{
+                    "code": 203,
+                    "icon": "error",
+                    "caption": "missing value, enter value in field value 1"
+                },
+                {
+                    "code": 204,
+                    "icon": "error",
+                    "caption": "missing value, enter value in field value 2"
+                },
+				{
+                    "code": 205,
+                    "icon": "error",
+                    "caption": "missing value, enter value in field value 3"
+                },
+				{
+                    "code": 206,
+                    "icon": "error",
+                    "caption": "field must not be empty."
+                },
+				{
+                    "code": 207,
+                    "icon": "error",
+                    "caption": "Flow URL not valid."
+                }
+            ]
+}

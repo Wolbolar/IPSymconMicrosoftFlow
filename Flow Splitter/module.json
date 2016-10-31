@@ -1,0 +1,11 @@
+{
+    "id": "{2AC67CFD-5116-40BD-A7C8-456F9A9B16D2}",
+    "name": "FlowSplitter",
+    "type": 2,
+    "vendor": "Microsoft",
+    "aliases": ["Microsoft Flow Splitter"],
+    "parentRequirements": ["{57D4EC3C-E4DC-4CE7-8819-A228B08E94DE}"],
+    "childRequirements": ["{C1269E03-7292-4406-88E1-E9A8BEE8795F}"],
+    "implemented": ["{69D64BD2-528D-4204-95B1-DFE7485230F7}", "{3F5C518E-C367-40AA-9231-479E50E914A4}"],
+    "prefix": "FlowS"
+}

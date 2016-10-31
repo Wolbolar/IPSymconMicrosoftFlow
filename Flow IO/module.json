@@ -1,0 +1,11 @@
+{
+    "id": "{09A63600-4313-4CE9-8875-8F64A44C5D5E}",
+    "name": "FlowIO",
+    "type": 1,
+    "vendor": "Microsoft",
+    "aliases": ["Microsoft Flow I/O"],
+    "parentRequirements": [],
+    "childRequirements": ["{69D64BD2-528D-4204-95B1-DFE7485230F7}"],
+    "implemented": ["{57D4EC3C-E4DC-4CE7-8819-A228B08E94DE}"],
+    "prefix": "FlowIO"
+}
