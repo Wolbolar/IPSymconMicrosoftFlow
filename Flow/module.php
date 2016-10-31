@@ -619,8 +619,7 @@
 		{
 			if ($type == 1) // Senden
 			{
-				$form = '"actions": [{ "type": "Label", "label": "configuration Microsoft Flow:" },
-				{ "type": "Label", "label": "request configuration Microsoft Flow:" },
+				$form = '"actions": [{ "type": "Label", "label": "request configuration Microsoft Flow:" },
 				{ "type": "Label", "label": " - My Flows" },
 				{ "type": "Label", "label": " - generate new without template" },
 				{ "type": "Label", "label": " - choose request" },
@@ -666,7 +665,18 @@
 			
 			elseif ($type == 3) // Senden / Empfangen
 			{
-				$form = '"actions": [ { "type": "Label", "label": "HTTP configuration Flow: " },
+				$form = '"actions": [{ "type": "Label", "label": "configuration Microsoft Flow:" },
+				{ "type": "Label", "label": "request configuration Microsoft Flow:" },
+				{ "type": "Label", "label": " - My Flows" },
+				{ "type": "Label", "label": " - generate new without template" },
+				{ "type": "Label", "label": " - choose request" },
+				{ "type": "Label", "label": " - JSON Schema:" },
+				{ "type": "Label", "label": " - next step" },
+				
+				{ "type": "Label", "label": " - choose next steps" },
+				{ "type": "Label", "label": " - after finishing flow, open flow again for editing request and copy the URL in this module" },
+				{ "type": "Label", "label": "______________________________________________________________________________________________________" },
+				{ "type": "Label", "label": "HTTP configuration Flow: " },
 				{ "type": "Label", "label": " - Method:" },
 				{ "type": "Label", "label": "     POST " },
 				{ "type": "Label", "label": " - URI:" },
