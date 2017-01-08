@@ -1,5 +1,7 @@
 {
     "id": "{09A63600-4313-4CE9-8875-8F64A44C5D5E}",
+	"title": "Microsoft Flow I/O Instanz",
+	"description": "I/O Instanz mit Webhook für Microsoft Flow",
     "name": "FlowIO",
     "type": 1,
     "vendor": "Microsoft",

@@ -1,5 +1,7 @@
 {
 	"id": "{A34F3D85-8A77-4557-918B-7D0A13EC8089}",
+	"title": "Microsoft Flow Instanz",
+	"description": "Instanz um Trigger an Microsoft Flow zu schicken oder Trigger von Microsoft Flow zu empfangen",
 	"name": "Flow",
 	"type": 3,
 	"vendor": "Microsoft",

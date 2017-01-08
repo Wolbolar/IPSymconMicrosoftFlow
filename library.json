@@ -1,9 +1,12 @@
 {
 	"id": "{49BF5815-9ACC-4D31-839C-57279AB1303D}",
+	"description": "Microsoft Flow Modul",
+	"tags": "Flow",
+	"req_ips_version": "4.1",
 	"author": "Fonzo",
 	"name": "MicrosoftFlow",
 	"url": "flow.microsoft.com",
-	"version": "0.1",
+	"version": "0.5",
 	"build": 0,
 	"date": 0
 }

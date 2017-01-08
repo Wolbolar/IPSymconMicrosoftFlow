@@ -1,5 +1,7 @@
 {
     "id": "{2AC67CFD-5116-40BD-A7C8-456F9A9B16D2}",
+	"title": "Microsoft Flow Splitter",
+	"description": "Microsoft Flow Splitter Instanz",
     "name": "FlowSplitter",
     "type": 2,
     "vendor": "Microsoft",

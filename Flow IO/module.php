@@ -130,7 +130,7 @@ class FlowIO extends IPSModule
 	protected function SetFlowInterface()
 		{
 			$ipsversion = $this->GetIPSVersion();
-			if($ipsversion == 0 || $ipsversion == 1)
+			if($ipsversion == 0)
 				{
 					//prüfen ob Script existent
 					$SkriptID = @IPS_GetObjectIDByIdent("FlowIPSInterface", $this->InstanceID);
