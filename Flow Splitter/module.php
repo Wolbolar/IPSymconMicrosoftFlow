@@ -28,13 +28,16 @@ class FlowSplitter extends IPSModule
 		*/
 		$ParentID = $this->GetParent();
 		
-			
+		$this->SetStatus(102);
+		/*
+		$ParentID = $this->GetParent();
+					
 		// Wenn I/O verbunden ist
 		if ($this->HasActiveParent($ParentID))
 			{
 				//Instanz aktiv
 			}
-
+		*/	
     }
 
 		/**
