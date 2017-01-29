@@ -42,7 +42,7 @@ Kanäle von Flow mit IP-Symcon 4 verknüpfen.
 
  Wir wechseln zu IP-Symcon (Ver. 4.1) und fügen unter Kerninstanzen über _*Modules*_ -> Hinzufügen das Modul hinzu mit der URL
 ```
-git://github.com/Wolbolar/IPSymconFlow.git
+https://github.com/Wolbolar/IPSymconMicrosoftFlow
 ```	
 
 ### b. Einrichtung in IPS
