@@ -10,7 +10,7 @@ class FlowSplitter extends IPSModule
 		
 		//These lines are parsed on Symcon Startup or Instance creation
         //You cannot use variables here. Just static values.
-		$this->RequireParent("{09A63600-4313-4CE9-8875-8F64A44C5D5E}", "Flow I/O"); //Flow I/O		
+		$this->RequireParent("{09A63600-4313-4CE9-8875-8F64A44C5D5E}"); //Flow I/O		
 
     }
 
@@ -20,24 +20,13 @@ class FlowSplitter extends IPSModule
         parent::ApplyChanges();
         $change = false;
 		
-		/*
-		$this->RegisterVariableString("BufferIN", "BufferIN", "", 1);
-        $this->RegisterVariableString("CommandOut", "CommandOut", "", 2);
-        IPS_SetHidden($this->GetIDForIdent('CommandOut'), true);
-        IPS_SetHidden($this->GetIDForIdent('BufferIN'), true);
-		*/
-		$ParentID = $this->GetParent();
-		
-		$this->SetStatus(102);
-		/*
 		$ParentID = $this->GetParent();
 					
 		// Wenn I/O verbunden ist
 		if ($this->HasActiveParent($ParentID))
 			{
-				//Instanz aktiv
+				$this->SetStatus(102);
 			}
-		*/	
     }
 
 		/**
@@ -46,10 +35,7 @@ class FlowSplitter extends IPSModule
         *
         *
         */
-	protected $debug = false;
 	
-	
-
 	################## DUMMYS / WOARKAROUNDS - protected
 
     protected function GetParent()
@@ -73,39 +59,6 @@ class FlowSplitter extends IPSModule
         return false;
     }
 
-    private function SetValueBoolean($Ident, $value)
-    {
-        $id = $this->GetIDForIdent($Ident);
-        if (GetValueBoolean($id) <> $value)
-        {
-            SetValueBoolean($id, $value);
-            return true;
-        }
-        return false;
-    }
-
-    private function SetValueInteger($Ident, $value)
-    {
-        $id = $this->GetIDForIdent($Ident);
-        if (GetValueInteger($id) <> $value)
-        {
-            SetValueInteger($id, $value);
-            return true;
-        }
-        return false;
-    }
-
-    private function SetValueString($Ident, $value)
-    {
-        $id = $this->GetIDForIdent($Ident);
-        if (GetValueString($id) <> $value)
-        {
-            SetValueString($id, $value);
-            return true;
-        }
-        return false;
-    }
-
     protected function SetStatus($InstanceStatus)
     {
         if ($InstanceStatus <> IPS_GetInstance($this->InstanceID)['InstanceStatus'])
@@ -119,12 +72,9 @@ class FlowSplitter extends IPSModule
 	 
 		// Empfangene Daten vom Flow I/O
 		$data = json_decode($JSONString);
-		//$dataio = json_encode($data->Buffer);
-		//SetValueString($this->GetIDForIdent("BufferIN"), $dataio);
-		
-		
-		//IPS_LogMessage("ReceiveData Flow Splitter", utf8_decode($data->Buffer)); //utf8_decode geht nur bei string
-	 
+		$dataio = json_encode($data->Buffer);
+		$this->SendDebug("ReceiveData Flow Splitter:",$dataio,0);
+			 
 		// Hier werden die Daten verarbeitet
 	 
 		// Weiterleitung zu allen Gerät-/Device-Instanzen
@@ -143,26 +93,20 @@ class FlowSplitter extends IPSModule
 		$debug = false;
 		$datasend = $data->Buffer;
 		$datasend = json_encode($datasend);
-		if($debug)
-		{
-			IPS_LogMessage("Flow Splitter Forward Data", $datasend);
-		}
-		//SetValueString($this->GetIDForIdent("CommandOut"), $datasend);
-	 
+		$this->SendDebug("Flow Splitter Forward Data:",$datasend,0);
+		 
 		// Hier würde man den Buffer im Normalfall verarbeiten
 		// z.B. CRC prüfen, in Einzelteile zerlegen
 		try
 		{
-			//
+			// Weiterleiten zur I/O Instanz
+			$resultat = $this->SendDataToParent(json_encode(Array("DataID" => "{57D4EC3C-E4DC-4CE7-8819-A228B08E94DE}", "Buffer" => $data->Buffer))); //TX GUI
 		}
 		catch (Exception $ex)
 		{
 			echo $ex->getMessage();
 			echo ' in '.$ex->getFile().' line: '.$ex->getLine().'.';
 		}
-	 
-		// Weiterleiten zur I/O Instanz
-		$resultat = $this->SendDataToParent(json_encode(Array("DataID" => "{57D4EC3C-E4DC-4CE7-8819-A228B08E94DE}", "Buffer" => $data->Buffer))); //TX GUI
 	 
 		// Weiterverarbeiten und durchreichen
 		return $resultat;

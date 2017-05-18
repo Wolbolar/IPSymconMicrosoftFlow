@@ -338,7 +338,9 @@ FlowIO_ProcessHookDataOLD('.$this->InstanceID.');
 		$flowjson = file_get_contents('php://input');
 		$data = json_decode($flowjson);
 		$this->SendJSON($data);
-		IPS_LogMessage("Flow I/O:", utf8_decode($flowjson)." empfangen.");	
+		//IPS_LogMessage("Flow I/O:", utf8_decode($flowjson)." empfangen.");	
+		$datadebug = json_decode($flowjson,true);
+        $this->SendDebug("Flow I/O",print_r($datadebug,true),0);
 	}
 	
 	################## SEMAPHOREN Helper  - private

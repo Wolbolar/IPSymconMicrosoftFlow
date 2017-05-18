@@ -51,7 +51,7 @@ In IP-Symcon wird von jeden Flow den wir triggern wollen eine seperate Instanz a
 automatisch mit angelegt. Um die Instanz zu erstellen wechseln wir in die Kategorie, unter der wir die Instanz platzieren wollen
 und erstellen mit *CTRL+1* eine neue Instanz.
 
-![Modulauswahl](Doku/flowinstall1a.png?raw=true "Modulauswahl")
+![Modulauswahl](docs/flowinstall1a.png?raw=true "Modulauswahl")
 
 Über _**Flow**_ finden wir die Instanz und mit weiter und Ok wird diese angelegt.
 
@@ -60,15 +60,15 @@ Es gibt die Möglichkeit aus IP-Symcon herraus einen Flow zu triggern als auch d
 Jede IP-Symcon Flow Instanz steht für ein Event das in Micrrosoft Flow auftritt es können beliebig viele Instanzen angelegt werden.
 Nach dem Öffen der Instanz erscheint zunächst eine Abfrage ob die aktuelle Instanz nur zum *Senden*, *Empfangen* oder zum *Senden/Empfangen* dienen soll.
 
-![Kommunikationabfrage](Doku/flowinstall2.png?raw=true "Kommunikationsabfrage")
+![Kommunikationabfrage](docs/flowinstall2.png?raw=true "Kommunikationsabfrage")
 
 Nachdem die passende Auswahl getroffen wurde bestätigen wir mit _Übernehmen_ anschließend **schließen wir die Instanz** und öffnen diese dann erneut.
 
 Nun haben wir je nach vorheriger Auswahl weitere Optionen. 
 
-![Varanzahl](Doku/flowinstall3.png?raw=true "Variablenanzahl eintragen")
+![Varanzahl](docs/flowinstall3.png?raw=true "Variablenanzahl eintragen")
 
-![VaranzahlRequest](Doku/flowinstall3a.png?raw=true "Variablenanzahl Request eintragen")
+![VaranzahlRequest](docs/flowinstall3a.png?raw=true "Variablenanzahl Request eintragen")
 
 Da es unzählige Flows und damit unzählige Möglichkeiten gibt was von Microsoft Flow an IP-Symcon geschickt werden kann, je nachdem welchen Flow
 man verwendet, muss pro angelegter Instanz vom Nutzer festgelegt werden vielviele Variablen von Flow erwartet werden. Dabei ist dabei darauf zu
@@ -86,7 +86,7 @@ Nachdem die passende Anzahl der Variablen selektiert wurde bestätigen wir mit _
 
 Flow Modul Anforderung 
 
-![Flow Modul Anforderung ](Doku/flowmodul1.png "Flow Modul Anforderung ")
+![Flow Modul Anforderung ](docs/flowmodul1.png "Flow Modul Anforderung ")
 
 Im Bereich Senden an Flow haben wir die Auswahl ob wir eine existierende Variable benutzen wollen. Dann wählen wir diese bei _Variablen mit Werten für Microsoft Flow Anforderung_ aus.
 Wenn wir eine Konstante einem Wert den wir an Flow schicken wollen zuweisen wollen lassen wir das Feld zum Variablen auswählen leer und kreuzen _Modul Wert nutzen_ an und tragen
@@ -96,7 +96,7 @@ dann den Wert in das dazugehörige Feld ein.
 
 Flow Modul HTTP 
 
-![Flow Modul HTTP](Doku/flowmodul2.png "Flow Modul HTTP")
+![Flow Modul HTTP](docs/flowmodul2.png "Flow Modul HTTP")
 
 Im Bereich Empfang von Flow haben wir die Auswahl ob wir eine existierende Variable benutzen wollen. Dann selektieren wir die passende Variable im Auswahlfeld. Wenn noch keine Variable
 haben könne wir auch _Variable für Wert vom Modul anlegen_ auswählen. Das Modul legt dann passend zum den ankommenden Daten von Flow eine Vraiable des entsprechnden Variablentyps an.
@@ -109,7 +109,7 @@ fortfahren.
 
 Wir melden uns bei [Microsoft Flow](https://flow.microsoft.com "Microsoft Flow") an und wechslen in die Ansicht _Meine Flows_.
 
-![Meine Flows](Doku/flow1.png?raw=true "Meine Flows")
+![Meine Flows](docs/flow1.png?raw=true "Meine Flows")
 
 Abhänig davon ab wir Daten an  Flow schicken wollen oder von Flow Daten erhalten wollen gehen wir nun unterschiedlich vor.
 
@@ -121,32 +121,32 @@ Unter Meine Flows wählen wir _**Ohne Vorlage neu erstellen**_
 
 Als Trigger wählen wir Anforderung
 
-![Anforderung](Doku/flow2.png?raw=true "Anforderung")
+![Anforderung](docs/flow2.png?raw=true "Anforderung")
 
 Es öffnet sich ein Fenster mit der Anforderung
 
-![Anforderung leer](Doku/flow3.png?raw=true "Anforderung leer")
+![Anforderung leer](docs/flow3.png?raw=true "Anforderung leer")
 
 Das Feld _**HTTP POST an diese URL**_ ist noch leer. Die URL wird erst angezeigt wenn wir den Flow fertig erstellt haben und dann den Flow erneut zum bearbeiten wieder öffnen.
 Im nächsten Schritt fügen wir eine Bedingung oder Aktion hinzu. Wir können nun mehrere Aktionen und Bedingungen in einer Reihe verknüpfen. Ein Flow muss mindestens aus einem
 Trigger und einer Aktion bestehen.
 
-![Bedingung](Doku/flow4.png?raw=true "Bedingung")
+![Bedingung](docs/flow4.png?raw=true "Bedingung")
 
 Hier fahren wir jetzt mit den weiteren Schritten bei der Erstellung des Flows fort und erstellen diesen am Schluss.
 
-![Flow erstellen](Doku/flow7.png "Flow erstellen")
+![Flow erstellen](docs/flow7.png "Flow erstellen")
 
 Dann können wir in der Liste der eigenen Flows den soeben erstellten Flow zum Bearbeiten über _Flow bearbeiten_ öffnen.
 
-![Flow bearbeiten](Doku/flow8.png "Flow bearbeiten")
+![Flow bearbeiten](docs/flow8.png "Flow bearbeiten")
 
 Wenn wir nun den Flow erneut öffnen und auf die Anforderung klicken steht nun hier eine URL, diese kopieren wir in die Zwischenablage und fügen diese dann in das Feld _**HTTP POST URL**_ im Modul ein.
 Das JSON Schema ergänzen wir entsprechend der Anzahl an Werten die wir vom Modul verschicken.
 
 Anforderung Flow  
 
-![Flow Anforderung](Doku/flowanforderung.png "Flow Anforderung")
+![Flow Anforderung](docs/flowanforderung.png "Flow Anforderung")
 
 Wenn nun soweit alles eingetragen wurde und die URL im Modul übernommen wurde können wir nun aus IP Symcon den soeben erstellten Flow Triggern.
 
@@ -154,15 +154,15 @@ Wenn nun soweit alles eingetragen wurde und die URL im Modul übernommen wurde k
 
 Wenn wir über einen Flow Daten an IP-Symcon verschicken wollen erstellen wir zunächst den Flow wie wir ihn benötigen und schließen den Flow dann mit einer Aktion _HTTP_ ab.
 
-![VarAuswahl](Doku/flow4.png?raw=true "Variablen Auswahl")
+![VarAuswahl](docs/flow4.png?raw=true "Variablen Auswahl")
 
-![VarAuswahl HTTP](Doku/flow5.png?raw=true "Variablen Auswahl HTTP")
+![VarAuswahl HTTP](docs/flow5.png?raw=true "Variablen Auswahl HTTP")
 
 Flow HTTP 
 
-![Flow HTTP a](Doku/configflowhttp.png "Flow HTTP a") 
+![Flow HTTP a](docs/configflowhttp.png "Flow HTTP a") 
 
-![Flow HTTP b](Doku/configflowc.png "Flow HTTP b") 
+![Flow HTTP b](docs/configflowc.png "Flow HTTP b") 
 
 
 Das Modul in IP Symcon erwartet die Daten wie folgt:

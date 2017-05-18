@@ -7,7 +7,7 @@
 		{
 			//Never delete this line!
 			parent::Create();
-			$this->ConnectParent("{2AC67CFD-5116-40BD-A7C8-456F9A9B16D2}", "Flow Splitter"); //Flow Splitter
+			$this->ConnectParent("{2AC67CFD-5116-40BD-A7C8-456F9A9B16D2}"); //Flow Splitter
 			$this->RegisterPropertyString("flowwebhook", "");
 			$this->RegisterPropertyInteger("selection", 0);
 			$this->RegisterPropertyInteger("countsendvars", 0);
