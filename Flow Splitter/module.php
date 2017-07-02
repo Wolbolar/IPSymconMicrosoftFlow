@@ -30,8 +30,8 @@ class FlowSplitter extends IPSModule
     }
 
 		/**
-        * Die folgenden Funktionen stehen automatisch zur Verfügung, wenn das Modul über die "Module Control" eingefügt wurden.
-        * Die Funktionen werden, mit dem selbst eingerichteten Prefix, in PHP und JSON-RPC wiefolgt zur Verfügung gestellt:
+        * Die folgenden Funktionen stehen automatisch zur VerfÃ¼gung, wenn das Modul Ã¼ber die "Module Control" eingefÃ¼gt wurden.
+        * Die Funktionen werden, mit dem selbst eingerichteten Prefix, in PHP und JSON-RPC wiefolgt zur VerfÃ¼gung gestellt:
         *
         *
         */
@@ -59,13 +59,7 @@ class FlowSplitter extends IPSModule
         return false;
     }
 
-    protected function SetStatus($InstanceStatus)
-    {
-        if ($InstanceStatus <> IPS_GetInstance($this->InstanceID)['InstanceStatus'])
-            parent::SetStatus($InstanceStatus);
-    }
 
-	
 	// Data an Child weitergeben
 	public function ReceiveData($JSONString)
 	{
@@ -77,14 +71,15 @@ class FlowSplitter extends IPSModule
 			 
 		// Hier werden die Daten verarbeitet
 	 
-		// Weiterleitung zu allen Gerät-/Device-Instanzen
+		// Weiterleitung zu allen GerÃ¤t-/Device-Instanzen
 		$this->SendDataToChildren(json_encode(Array("DataID" => "{C1269E03-7292-4406-88E1-E9A8BEE8795F}", "Buffer" => $data->Buffer))); //Flow Splitter Interface GUI
 	}
 	
 			
 	################## DATAPOINT RECEIVE FROM CHILD
-	
 
+    // Type String, Declaration can be used when PHP 7 is available
+    //public function ForwardData(string $JSONString)
 	public function ForwardData($JSONString)
 	{
 	 
@@ -95,8 +90,8 @@ class FlowSplitter extends IPSModule
 		$datasend = json_encode($datasend);
 		$this->SendDebug("Flow Splitter Forward Data:",$datasend,0);
 		 
-		// Hier würde man den Buffer im Normalfall verarbeiten
-		// z.B. CRC prüfen, in Einzelteile zerlegen
+		// Hier wÃ¼rde man den Buffer im Normalfall verarbeiten
+		// z.B. CRC prÃ¼fen, in Einzelteile zerlegen
 		try
 		{
 			// Weiterleiten zur I/O Instanz
